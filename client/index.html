@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twatt Ajaxified</title>
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Twatt Ajaxified</h1>
+    <form class="" method="post" onsubmit="tweetPlease()">
+      <label for="">Tweet content</label>
+      <input id="tweet" type="text" name="tweet" value="" placeholder="Tweet Content"/>
+      <button type="button" name="button">Tweet please!</button>
+    </form>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('form').submit(function(event) {
+
+          var tweet = $('#tweet').val()
+          console.log(tweet);
+        })
+
+      })
+    </script>
+  </body>
+</html>
