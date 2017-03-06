@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # twatt-ajaxified
 
 ####Running project
