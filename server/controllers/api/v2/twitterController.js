@@ -9,14 +9,13 @@ var client = new Twitter({
 
 module.exports = {
     tweet: function(req, res, next) {
+      console.log(req.body);
         client.post('statuses/update', {
-            status: 'I Love #NodeJS'
+            status: req.body.tweet
         }, function(error, tweet, response) {
           console.log(error);
             if (error) throw error;
-            console.log(tweet); // Tweet body.
             res.send(tweet)
-            console.log(response); // Raw response object.
         });
     }
 }
